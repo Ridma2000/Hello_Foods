@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar at the top -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple"
+            android:elevation="4dp"
+            app:popupTheme="@style/CustomToolbarTheme" />
+
+        <!-- ImageView for item image -->
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+
+        <!-- TextView for item title -->
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Item "
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- TextViews for old and new price -->
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Price: "
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold" />
+
+        <!-- TextView for item description -->
+        <TextView
+            android:id="@+id/item_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Item Description"
+            android:textSize="14sp" />
+
+        <!-- Quantity Selector Layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/button_decrease"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:textColor="@android:color/white"
+                android:text="-"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:padding="0dp" />
+
+            <TextView
+                android:id="@+id/text_quantity"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="18sp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/white" />
+
+            <Button
+                android:id="@+id/button_increase"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"
+                android:padding="0dp" />
+
+        </LinearLayout>
+
+        <!-- Button to add item to cart -->
+        <Button
+            android:id="@+id/add_to_cart_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Add to Cart" />
+
+        <Button
+            android:id="@+id/go_to_cart_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Go to Cart" />
+
+    </LinearLayout>
+</ScrollView>
